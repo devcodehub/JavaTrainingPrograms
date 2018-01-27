@@ -1,0 +1,9 @@
+Compiled from "AnnoClass1.java"
+class AnnoClass1 {
+  int x;
+  static int y;
+  AnnoClass1();
+  My display();
+  public static void main(java.lang.String[]);
+  static {};
+}
