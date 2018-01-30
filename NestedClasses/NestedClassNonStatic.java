@@ -7,8 +7,16 @@ class NestedClassNonStatic
   class Inner
   {
     int x=50;
+    final static int z=100;  // allows only final static  but not static
+
+    // Not allowed in member Functions
+    /*final static void display()
+    {
+      System.out.println("display");
+    }*/
     void show()
     {
+      System.out.println(z);
       System.out.println(x);
       System.out.println(y);
       System.out.println(NestedClassNonStatic.this.x);  // this prints Outer non-static..
@@ -19,6 +27,22 @@ class NestedClassNonStatic
     System.out.println(n.x);
 
     NestedClassNonStatic.Inner i=n.new Inner();  // Inner is class type non-static data member
-    i.show()
+    i.show();
+  }
+}
+
+class Emp extends NestedClassNonStatic{
+  int x;
+  void show()
+  {
+    System.out.println(x);
+    System.out.println(this.x);
+    //System.out.println(NestedClassNonStatic.this.x);
+  }
+  public static void main(String[] args) {
+    Emp e=new Emp();
+    Temp.Inner i =e.new Inner();
+    i.show();
+    e.show();
   }
 }

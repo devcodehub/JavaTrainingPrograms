@@ -25,7 +25,7 @@ class LocalInner
   }
   public static void main(String[] args) {
     LocalInner li=new LocalInner();
-    i.show();
+    //li.show();
     My z=li.display();
     z.show();
   }

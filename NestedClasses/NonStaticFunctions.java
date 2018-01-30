@@ -22,7 +22,7 @@ class NestedClassNonStatic
     i.show();
   }
 }
-class NonStaticFunctions extends NestedClassNonStatic.Inner
+class NonStaticFunctions extends NestedClassNonStatic
 {
   int x=30;
   void show()
